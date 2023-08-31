@@ -208,7 +208,7 @@ defmodule ABI.TypeEncoder do
     kec =
       function_selector
       |> FunctionSelector.encode()
-      |> :keccakf1600.sha3_256()
+      |> ParsecKeccak.hash()
 
     # Take first four bytes
     <<init::binary-size(4), _rest::binary>> = kec

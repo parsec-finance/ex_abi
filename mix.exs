@@ -33,7 +33,10 @@ defmodule ABI.Mixfile do
       {:dialyxir, "~> 1.1", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.24", only: :dev, runtime: false},
       {:jason, "~> 1.4"},
-      {:keccakf1600, "~> 2.0.0", hex: :keccakf1600_orig},
+      {:parsec_keccak,
+        git: "https://github.com/parsec-finance/parsec_keccak",
+        ref: "91232f4bd4444a5b5c2dd3724ab169d1699a3253"
+      },
       {:propcheck, "~> 1.4", only: [:test, :dev]}
     ]
   end
